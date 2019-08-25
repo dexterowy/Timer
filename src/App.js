@@ -1,10 +1,17 @@
 import React from 'react';
 
+import PageWrapper from './PageWrapper';
+import Navbar from './Navigation/NavBar';
+import Timer from './Timer/Timer';
+
+
+
 function App() {
   return (
-    <h1>
-      Here will be a timer!
-    </h1>
+    <PageWrapper>
+      <Navbar />
+      <Timer />
+    </PageWrapper>
   );
 }
 
