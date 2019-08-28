@@ -6,6 +6,7 @@ const StyledWrapper = styled.div`
     background: #4F4F4F;
 `
 
+
 const PageWrapper = (props) => {
     return (
         <StyledWrapper>

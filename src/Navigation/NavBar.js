@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import logo from '../img/logo.svg';
 import settings from '../img/settings.svg';
+import save from '../img/save.svg';
 
 const StyledNavbar = styled.div`
     position: fixed;
@@ -26,11 +27,11 @@ const StyledSettingsIcon = styled.img`
     height: 39px;
 `
 
-const NavBar = () => {
+const NavBar = (props) => {
     return (
         <StyledNavbar>
             <StyledLogo src={logo} />
-            <StyledSettingsIcon src={settings} />
+            {props.settingsOpen ? <StyledSettingsIcon src={save} onClick={props.closeSettings} /> : <StyledSettingsIcon src={settings} onClick={props.openSettings} />}
         </StyledNavbar>
     )
 }
